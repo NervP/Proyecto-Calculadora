@@ -54,7 +54,6 @@ public class OperacionesBasicas {
         if (a == 0) {
             return "No es una ecuación cuadrática";
         }
-        
         if (discriminante > 0) {
             double x1 = (-b + Math.sqrt(discriminante)) / (2 * a);
             double x2 = (-b - Math.sqrt(discriminante)) / (2 * a);
