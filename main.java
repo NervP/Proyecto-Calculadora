@@ -1,15 +1,7 @@
-/*
- * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
- * Click nbfs://nbhost/SystemFileSystem/Templates/Classes/Class.java to edit this template
- */
+import java.util.Scanner;
 
-/**
- *
- * @author monst
- */
+public class Main {
 
-
-public class main {
     public static void main(String[] args) {
         Scanner sc = new Scanner(System.in);
         OperacionesBasicas op = new OperacionesBasicas();
@@ -52,7 +44,7 @@ public class main {
             case 5:
                 System.out.print("Ingrese un número para calcular su factorial: ");
                 int n = sc.nextInt();
-                long fact = op.factorial(n);
+                double fact = op.factorial(n); // Se cambió a double
                 if (fact == -1) {
                     System.out.println("No se puede calcular el factorial de un número negativo.");
                 } else {
@@ -72,10 +64,10 @@ public class main {
                 
             case 7:
                 System.out.print("Ingrese los coeficientes a, b y c: ");
-                double coefA = sc.nextDouble();
-                double coefB = sc.nextDouble();
-                double coefC = sc.nextDouble();
-                System.out.println(op.formulaGeneral(coefA, coefB, coefC));
+                double a = sc.nextDouble();
+                double b = sc.nextDouble();
+                double c = sc.nextDouble();
+                System.out.println(op.formulaGeneral(a, b, c));
                 break;
                 
             default:
@@ -85,4 +77,3 @@ public class main {
         sc.close();
     }
 }
-
